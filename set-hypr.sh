@@ -7,7 +7,6 @@
 # Below is a list of the packages that would be installed
 #
 # hyprland: This is the Hyprland compositor
-# kitty: This is the default terminal
 # waybar: Waybar now has hyprland support
 # swaybg: This is used to set a desktop background image
 # swaylock-effects: This allows for the locking of the desktop its a fork that adds some editional visual effects
@@ -31,6 +30,7 @@
 # lolcat: a color-gradient stdout command-line tool
 # cowsay: needs no explanation
 # fortune-mod: gives the user a fortune
+# alacritty: better terminal than kitty
 
 #### Check for yay ####
 ISYAY=/sbin/yay
@@ -45,7 +45,7 @@ fi
 ### Install all of the above pacakges ####
 read -n1 -rep 'Would you like to install the packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
-    yay -S --noconfirm hyprland kitty waybar \
+    yay -S --noconfirm hyprland alacritty waybar \
     swaybg swaylock-effects wofi wlogout mako thunar \
     ttf-jetbrains-mono-nerd noto-fonts-emoji \
     polkit-gnome python-requests starship \
@@ -63,7 +63,7 @@ read -n1 -rep 'Would you like to copy config files? (y,n)' CFG
 if [[ $CFG == "Y" || $CFG == "y" ]]; then
     echo -e "Copying config files...\n"
     cp -R hypr ~/.config/
-    cp -R kitty ~/.config/
+    cp -R alacritty ~/.config/
     cp -R mako ~/.config/
     cp -R waybar ~/.config/
     cp -R swaylock ~/.config/
@@ -74,7 +74,7 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     chmod +x ~/.config/waybar/scripts/waybar-wttr.py
 fi
 
-### Install teh starship shell ###
+### Install the starship shell ###
 read -n1 -rep 'Would you like to install the starship shell? (y,n)' STAR
 if [[ $STAR == "Y" || $STAR == "y" ]]; then
     # install the starship shell
