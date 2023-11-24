@@ -31,6 +31,8 @@
 # fortune-mod: gives the user a fortune
 # alacritty: better terminal than kitty
 # nwg-look: replacement for lxappearance, changing icons and themes in gtk apps
+# yltra-flat-icons: attractive icon set
+# qogir-gtk-theme: attractive theme for gtk apps
 
 #### Check for yay ####
 ISYAY=/sbin/yay
@@ -50,9 +52,8 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     ttf-jetbrains-mono-nerd noto-fonts-emoji \
     polkit-gnome python-requests starship \
     swappy grim slurp pamixer gvfs \
-    lxappearance xfce4-settings \
+    nwg-look yltra-flat-icons qogir-gtk-theme xfce4-settings \
     xdg-desktop-portal-hyprland lolcat cowsay fortune-mod \
-    nwg-look \
 
     # Clean out other portals
     echo -e "Cleaning out conflicting xdg portals...\n"
