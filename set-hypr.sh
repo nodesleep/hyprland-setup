@@ -24,13 +24,13 @@
 # slurp: This helps with screenshots, it selects a region in a Wayland compositor
 # pamixer: This helps with audio settings such as volume
 # gvfs: adds missing functionality to thunar such as automount usb drives
-# lxappearance: used to set GTK theme
 # xfce4-settings: set of tools for xfce, needed to set GTK theme
 # xdg-desktop-portal-hyprland: xdg-desktop-portal backend for hyprland
 # lolcat: a color-gradient stdout command-line tool
 # cowsay: needs no explanation
 # fortune-mod: gives the user a fortune
 # alacritty: better terminal than kitty
+# nwg-look: replacement for lxappearance, changing icons and themes in gtk apps
 
 #### Check for yay ####
 ISYAY=/sbin/yay
@@ -52,7 +52,8 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     swappy grim slurp pamixer gvfs \
     lxappearance xfce4-settings \
     xdg-desktop-portal-hyprland lolcat cowsay fortune-mod \
-    
+    nwg-look \
+
     # Clean out other portals
     echo -e "Cleaning out conflicting xdg portals...\n"
     yay -R --noconfirm xdg-desktop-portal-gnome xdg-desktop-portal-gtk
