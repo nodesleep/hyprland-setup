@@ -8,7 +8,7 @@
     "height": 50,
     "modules-left": ["clock","custom/weather","hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["network", "temperature","pulseaudio","pulseaudio#microphone","tray"],
+    "modules-right": ["network", "pulseaudio","pulseaudio#microphone","tray"],
     "hyprland/window": {
         "format": "{}"
     },
@@ -22,7 +22,7 @@
             "2": [],
             "3": [],
             "4": [],
-            "5": [],
+            "5": []
         }
     },
 
@@ -89,5 +89,5 @@
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}"
-    },
+    }
 }

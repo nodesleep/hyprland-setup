@@ -28,6 +28,9 @@
 # lxappearance: used to set GTK theme
 # xfce4-settings: set of tools for xfce, needed to set GTK theme
 # xdg-desktop-portal-hyprland: xdg-desktop-portal backend for hyprland
+# lolcat: a color-gradient stdout command-line tool
+# cowsay: needs no explanation
+# fortune-mod: gives the user a fortune
 
 #### Check for yay ####
 ISYAY=/sbin/yay
@@ -48,7 +51,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     polkit-gnome python-requests starship \
     swappy grim slurp pamixer gvfs \
     lxappearance xfce4-settings \
-    xdg-desktop-portal-hyprland
+    xdg-desktop-portal-hyprland lolcat cowsay fortune-mod \
     
     # Clean out other portals
     echo -e "Cleaning out conflicting xdg portals...\n"
