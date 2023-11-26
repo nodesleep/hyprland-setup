@@ -8,7 +8,8 @@
     "height": 50,
     "modules-left": ["clock","custom/weather","hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["network", "pulseaudio","pulseaudio#microphone","tray"],
+    "modules-right": ["network","pulseaudio","pulseaudio#microphone", "tray"],
+
     "hyprland/window": {
         "format": "{}"
     },
@@ -73,18 +74,11 @@
         "on-scroll-down": "pamixer --default-source -d 5",
         "scroll-step": 5
     },
-    
-    "temperature": {
-        "thermal-zone": 1,
-        "format": "{temperatureF}°F ",
-        "critical-threshold": 80,
-        "format-critical": "{temperatureC}°C "
-    },
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "  {signalStrength}%",
-        "format-ethernet": "{ipaddr}",
+        "format-ethernet": " {ipaddr}",
         "tooltip-format": "{essid} - {ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
