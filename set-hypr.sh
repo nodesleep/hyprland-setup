@@ -33,6 +33,7 @@
 # nwg-look: replacement for lxappearance, changing icons and themes in gtk apps
 # yltra-flat-icons: attractive icon set
 # qogir-gtk-theme: attractive theme for gtk apps
+# ttf-font-awesome: Font awesome icons for waybar
 
 #### Check for yay ####
 ISYAY=/sbin/yay
@@ -54,6 +55,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     swappy grim slurp pamixer gvfs \
     nwg-look yltra-flat-icons qogir-gtk-theme xfce4-settings \
     xdg-desktop-portal-hyprland lolcat cowsay fortune-mod \
+    ttf-font-awesome \
 
     # Clean out other portals
     echo -e "Cleaning out conflicting xdg portals...\n"
