@@ -34,6 +34,7 @@
 # yltra-flat-icons: attractive icon set
 # qogir-gtk-theme: attractive theme for gtk apps
 # ttf-font-awesome: Font awesome icons for waybar
+# neovim: Vim's sexier, younger cousin
 
 #### Check for yay ####
 ISYAY=/sbin/yay
@@ -55,7 +56,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     swappy grim slurp pamixer gvfs \
     nwg-look yltra-flat-icons qogir-gtk-theme xfce4-settings \
     xdg-desktop-portal-hyprland lolcat cowsay fortune-mod \
-    ttf-font-awesome \
+    ttf-font-awesome neovim \
 
     # Clean out other portals
     echo -e "Cleaning out conflicting xdg portals...\n"
@@ -72,6 +73,7 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     cp -R waybar ~/.config/
     cp -R swaylock ~/.config/
     cp -R wofi ~/.config/
+    cp -R nvim ~/.config/ 
     
     # Set some files as exacutable 
     chmod +x ~/.config/hypr/xdg-portal-hyprland
