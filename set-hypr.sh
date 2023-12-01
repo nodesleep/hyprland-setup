@@ -38,56 +38,56 @@
 
 #### Check for yay ####
 ISYAY=/sbin/yay
-if [ -f "$ISYAY" ]; then 
-    echo -e "yay was located, moving on.\n"
-    yay -Suy
-else 
-    echo -e "yay was not located, please install yay. Exiting script.\n"
-    exit 
+if [ -f "$ISYAY" ]; then
+	echo -e "yay was located, moving on.\n"
+	yay -Suy
+else
+	echo -e "yay was not located, please install yay. Exiting script.\n"
+	exit
 fi
 
 ### Install all of the above pacakges ####
 read -n1 -rep 'Would you like to install the packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
-    yay -S --noconfirm hyprland alacritty waybar \
-    swaybg swaylock-effects wofi wlogout mako thunar \
-    ttf-jetbrains-mono-nerd noto-fonts-emoji \
-    polkit-gnome python-requests starship \
-    swappy grim slurp pamixer gvfs \
-    nwg-look yltra-flat-icons qogir-gtk-theme xfce4-settings \
-    xdg-desktop-portal-hyprland lolcat cowsay fortune-mod \
-    ttf-font-awesome neovim \
+	yay -S --noconfirm hyprland alacritty waybar \
+		swaybg swaylock-effects wofi wlogout mako thunar \
+		ttf-jetbrains-mono-nerd noto-fonts-emoji \
+		polkit-gnome python-requests starship \
+		swappy grim slurp pamixer gvfs \
+		nwg-look yltra-flat-icons qogir-gtk-theme xfce4-settings \
+		xdg-desktop-portal-hyprland lolcat cowsay fortune-mod \
+		ttf-font-awesome neovim ripgrep fd
 
-    # Clean out other portals
-    echo -e "Cleaning out conflicting xdg portals...\n"
-    yay -R --noconfirm xdg-desktop-portal-gnome xdg-desktop-portal-gtk
+	# Clean out other portals
+	echo -e "Cleaning out conflicting xdg portals...\n"
+	yay -R --noconfirm xdg-desktop-portal-gnome xdg-desktop-portal-gtk
 fi
 
 ### Copy Config Files ###
 read -n1 -rep 'Would you like to copy config files? (y,n)' CFG
 if [[ $CFG == "Y" || $CFG == "y" ]]; then
-    echo -e "Copying config files...\n"
-    cp -R hypr ~/.config/
-    cp -R alacritty ~/.config/
-    cp -R mako ~/.config/
-    cp -R waybar ~/.config/
-    cp -R swaylock ~/.config/
-    cp -R wofi ~/.config/
-    cp -R nvim ~/.config/ 
-    
-    # Set some files as exacutable 
-    chmod +x ~/.config/hypr/xdg-portal-hyprland
-    chmod +x ~/.config/waybar/scripts/waybar-wttr.py
+	echo -e "Copying config files...\n"
+	cp -R hypr ~/.config/
+	cp -R alacritty ~/.config/
+	cp -R mako ~/.config/
+	cp -R waybar ~/.config/
+	cp -R swaylock ~/.config/
+	cp -R wofi ~/.config/
+	cp -R nvim ~/.config/
+
+	# Set some files as exacutable
+	chmod +x ~/.config/hypr/xdg-portal-hyprland
+	chmod +x ~/.config/waybar/scripts/waybar-wttr.py
 fi
 
 ### Install the starship shell ###
 read -n1 -rep 'Would you like to install the starship shell? (y,n)' STAR
 if [[ $STAR == "Y" || $STAR == "y" ]]; then
-    # install the starship shell
-    echo -e "Updating .bashrc...\n"
-    echo -e '\neval "$(starship init bash)"' >> ~/.bashrc
-    echo -e "copying starship config file to ~/.confg ...\n"
-    cp starship.toml ~/.config/
+	# install the starship shell
+	echo -e "Updating .bashrc...\n"
+	echo -e '\neval "$(starship init bash)"' >>~/.bashrc
+	echo -e "copying starship config file to ~/.confg ...\n"
+	cp starship.toml ~/.config/
 fi
 
 ### Script is done ###
@@ -95,7 +95,7 @@ echo -e "Script had completed.\n"
 echo -e "You can start Hyprland by typing Hyprland (note the capital H).\n"
 read -n1 -rep 'Would you like to start Hyprland now? (y,n)' HYP
 if [[ $HYP == "Y" || $HYP == "y" ]]; then
-    exec Hyprland
+	exec Hyprland
 else
-    exit
+	exit
 fi
