@@ -3,7 +3,7 @@
     border-radius: 0;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     min-height: 0;
 }
 
@@ -51,10 +51,14 @@ tooltip {
 #custom-weather,
 #window,
 #clock,
+#battery,
 #pulseaudio,
 #network,
+#bluetooth,
 #workspaces,
-#tray {
+#tray,
+#temperature,
+#backlight {
     background: #1e1e2e;
     opacity: 0.8;
     padding: 0px 10px;
@@ -66,6 +70,10 @@ tooltip {
 #tray {
     border-radius: 10px;
     margin-right: 10px;
+}
+
+#temperature.critical {
+    color: #eba0ac;
 }
 
 #workspaces {
@@ -96,6 +104,12 @@ tooltip {
     border-right: 0px;
 }
 
+#bluetooth {
+    color: #89b4fa;
+    border-left: 0px;
+    border-right: 0px;
+} 
+
 #pulseaudio {
     color: #89b4fa;
     border-left: 0px;
@@ -108,6 +122,12 @@ tooltip {
     border-right: 0px;
     border-radius: 0px 10px 10px 0px;
     margin-right: 10px;
+}
+
+#battery {
+    color: #ae63a1;
+    border-left: 0px;
+    border-right: 0px;
 }
 
 #custom-weather {

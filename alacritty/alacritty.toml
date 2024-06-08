@@ -1,0 +1,22 @@
+[font]
+size = 10
+
+[font.bold]
+style = "ExtraBold"
+
+[font.bold_italic]
+style = "Bold Italic"
+
+[font.italic]
+style = "Italic"
+
+[font.normal]
+family = "jetbrainsmono nfm"
+style = "Bold"
+
+[window]
+opacity = 0.9
+
+[window.padding]
+x = 10
+y = 10
